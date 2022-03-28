@@ -1,0 +1,19 @@
+
+{
+    "file" : "data\\goki_pink.png",
+
+    "frame" : {
+        "width"  : 128,
+        "height" : 128,
+        "cols"   : 3,
+        "rows"   : 1
+    },
+
+    "animations" : {
+        "wait" : {
+            "frames"    : [0, 1, 0, 2],
+            "interval"  : 0.1,
+            "loop"      : true
+        }
+    }
+}
