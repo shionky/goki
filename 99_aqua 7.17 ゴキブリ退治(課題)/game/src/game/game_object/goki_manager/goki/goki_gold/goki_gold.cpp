@@ -5,6 +5,7 @@ const int CGokiGold::m_height = 128;
 const float CGokiGold::m_radius = (float)m_width / 3.0f;
 const int CGokiGold::m_max_velocity = 200;
 const int CGokiGold::m_min_velocity = 100;
+const int CGokiGold::m_scale = 0.5;
 
 //コンストラクタ
 CGokiGold::CGokiGold(aqua::IGameObject* parent)
@@ -23,6 +24,7 @@ void CGokiGold::Initialize(void)
 	m_Width = m_width;
 	m_Height = m_height;
 	m_Radius = m_radius;
+
 
 	m_Position.x = (float)aqua::Rand(aqua::GetWindowWidth() - m_Width);
 	m_Position.y = (float)aqua::Rand(aqua::GetWindowHeight() - m_Height);

@@ -10,6 +10,7 @@
  */
 
 #include "effect_manager.h"
+#include "effect\Ehit_effect\ehit_effect.h"
 #include "effect\hit_effect\hit_effect.h"
 #include "effect\dead_effect\dead_effect.h"
 
@@ -33,7 +34,8 @@ Create( EFFECT_ID id, const aqua::CVector2& position )
 
     switch( id )
     {
-    case EFFECT_ID::HIT:    effect = aqua::CreateGameObject<CHitEffect>(this);      break;
+    /*case EFFECT_ID::HIT:    effect = aqua::CreateGameObject<CHitEffect>(this);      break;*/
+    case EFFECT_ID::HIT:    effect = aqua::CreateGameObject<CEhitEffect>(this);      break;
     case EFFECT_ID::DEAD:   effect = aqua::CreateGameObject<CDeadEffect>(this);     break;
     }
 

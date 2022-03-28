@@ -70,4 +70,5 @@ private:
     aqua::CTimer        m_AliveTimer;   //! 生存時間
     float               m_ScaleTime;    //! 拡大する時間
     aqua::CVector2      m_Position;     //! 位置
+    aqua::CEffect2D m_Effect;//エフェクト
 };

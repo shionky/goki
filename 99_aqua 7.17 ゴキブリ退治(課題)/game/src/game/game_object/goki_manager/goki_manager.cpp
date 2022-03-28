@@ -68,7 +68,7 @@ void CGokiManager::Update(void)
 
 IGameObject::Update();
 
-if (!aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
+if (!aqua::mouse::Button(aqua::mouse::BUTTON_ID::LEFT))
         return;
 
 CEffectManager* effect = (CEffectManager*)aqua::FindGameObject("EffectManager");

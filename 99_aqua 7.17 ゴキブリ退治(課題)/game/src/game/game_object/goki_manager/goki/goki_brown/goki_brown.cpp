@@ -27,13 +27,16 @@ void CGokiBrown::Initialize(void)
 	m_Position.x = (float)aqua::Rand(aqua::GetWindowWidth() - m_Width);
 	m_Position.y = (float)aqua::Rand(aqua::GetWindowHeight() - m_Height);
 
+	//ê∂ê¨
 	m_AnimeSprite.Create("data/goki_brown.ass");
 
+	//íÜêSín
 	m_AnimeSprite.anchor.x = (float)(m_Width / 2.0f);
 	m_AnimeSprite.anchor.y = (float)(m_Height / 2.0f);
 
 	float dir = aqua::DegToRad((float)aqua::Rand(360));
 
+	//ë¨Ç≥
 	float speed = (float)aqua::Rand(m_max_velocity - m_min_velocity) + m_min_velocity;
 
 	m_Velocity.x = cos(dir)*speed;

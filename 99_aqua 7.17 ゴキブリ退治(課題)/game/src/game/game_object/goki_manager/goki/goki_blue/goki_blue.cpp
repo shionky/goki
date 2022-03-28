@@ -1,10 +1,11 @@
 #include "goki_blue.h"
 
-const int CGokiBlue::m_width = 128;
-const int CGokiBlue::m_height = 128;
-const float CGokiBlue::m_radius = (float)m_width / 3.0f;
-const int CGokiBlue::m_max_velocity = 200;
-const int CGokiBlue::m_min_velocity = 100;
+const int CGokiBlue::	m_width			= 128;
+const int CGokiBlue::	m_height		= 128;
+const float CGokiBlue::	m_radius		= (float)m_width / 3.0f;
+const int CGokiBlue::	m_max_velocity	= 3000;
+const int CGokiBlue::	m_min_velocity	= 100;
+
 
 //コンストラクタ
 CGokiBlue::CGokiBlue(aqua::IGameObject* parent)
@@ -39,5 +40,5 @@ void CGokiBlue::Initialize(void)
 	m_Velocity.x = cos(dir) * speed;
 	m_Velocity.y = sin(dir) * speed;
 
-
+	m_Life = 3;
 }

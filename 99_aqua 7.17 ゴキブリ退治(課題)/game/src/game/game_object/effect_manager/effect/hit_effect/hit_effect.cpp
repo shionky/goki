@@ -32,7 +32,10 @@ void
 CHitEffect::
 Initialize( const aqua::CVector2& position )
 {
-    m_Sprite.Create( "data\\hit_effect.png" );
+ //   m_Sprite.Create( "data\\hit_effect.png" );
+ 
+    // エフェクト生成
+    m_Effect.Create("data/effect/gokihit.efkefc");
 
     m_Sprite.anchor.x = (float)m_width  / 2.0f;
     m_Sprite.anchor.y = (float)m_height / 2.0f;
@@ -43,6 +46,7 @@ Initialize( const aqua::CVector2& position )
     m_AliveTimer.Setup( m_alive_time );
 
     m_ScaleTime = 0.0f;
+
 }
 
 /*
@@ -64,6 +68,9 @@ Update( void )
     CCameraManager* camera = (CCameraManager*)aqua::FindGameObject( "CameraManager" );
 
     m_Sprite.position = m_Position - camera->GetPosition( );
+
+    // エフェクト更新
+    m_Effect.Update();
 }
 
 /*
@@ -73,7 +80,11 @@ void
 CHitEffect::
 Draw( void )
 {
-    m_Sprite.Draw();
+    // エフェクト描画
+    m_Effect.Draw();
+
+   // m_Sprite.Draw();
+
 }
 
 /*
@@ -83,5 +94,7 @@ void
 CHitEffect::
 Finalize( void )
 {
+    m_Effect.Delete();
+
     m_Sprite.Delete();
 }
