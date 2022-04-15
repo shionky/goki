@@ -98,6 +98,9 @@ Add( int score )
         m_Score = m_max_score;
 }
 
+
+
+
 /*
  *  スコアのクリア
  */

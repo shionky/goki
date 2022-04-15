@@ -1,4 +1,6 @@
 #include "goki_Silver.h"
+#include"../../goki_manager.h"
+#include"../../../ui_manager/ui_component/game_score/game_score.h"
 
 const int CGokiSilver::m_width = 128;
 const int CGokiSilver::m_height = 128;
@@ -39,5 +41,20 @@ void CGokiSilver::Initialize(void)
 	m_Velocity.x = cos(dir) * speed;
 	m_Velocity.y = sin(dir) * speed;
 
+	m_timer.Setup(5.0);
+
+}
+
+void CGokiSilver::Update(void)
+{
+	//ŽžŠÔŒo‰ß‚Å”–‚­‚È‚é
+	m_timer.Update();
+	if (m_timer.Finished())
+	{
+	 m_AnimeSprite.color.alpha = 45;
+
+	 m_Score = 3;
+	}
+	IGoki::Update();
 
 }

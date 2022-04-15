@@ -10,10 +10,10 @@ public:
 	//コンストラクタ
 	CGokiPink(aqua::IGameObject* parent);
 
-	//
+	//デストラクタ
 	~CGokiPink(void);
 
-	//
+	//初期化
 	void	Initialize(void);
 
 private:

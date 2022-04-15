@@ -5,7 +5,6 @@ const int CGokiGold::m_height = 128;
 const float CGokiGold::m_radius = (float)m_width / 3.0f;
 const int CGokiGold::m_max_velocity = 200;
 const int CGokiGold::m_min_velocity = 100;
-const int CGokiGold::m_scale = 0.5;
 
 //コンストラクタ
 CGokiGold::CGokiGold(aqua::IGameObject* parent)
@@ -41,5 +40,30 @@ void CGokiGold::Initialize(void)
 	m_Velocity.x = cos(dir) * speed;
 	m_Velocity.y = sin(dir) * speed;
 
+	
+	//m_timer.Setup(2);
 
 }
+
+//
+////更新
+//void CGokiGold::Update(void)
+//{
+//	//時間経過で向きを変える
+//
+//	if (m_timer.Finished())
+//	{
+//
+//	m_Velocity.x = rand()%45+1;
+//	m_Velocity.y = rand()%45+1;
+//
+//	m_AnimeSprite.rotation = atan2(m_Velocity.y, m_Velocity.x);
+//		
+//
+//
+//	m_timer.Reset();
+//	}
+//	m_AnimeSprite.rotation = 180.0f;
+//
+//	IGoki::Update();
+//}

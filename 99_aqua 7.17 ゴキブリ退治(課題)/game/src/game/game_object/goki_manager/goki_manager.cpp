@@ -56,19 +56,13 @@ void CGokiManager::Update(void)
 
         m_CreateTimer.Reset();
 
-        //ゴキブリの生成
-//        Create(GOKI_ID::BROWN);
-//        Create(GOKI_ID::BLACK);
-//        Create(GOKI_ID::GOLD);
-//        Create(GOKI_ID::SILVER);
-//        Create(GOKI_ID::BLUE);
-//        Create(GOKI_ID::PINK);
+        //ゴキブリをランダムに生成
         Create((GOKI_ID)(rand() % (int)GOKI_ID::MAX));
     }
 
 IGameObject::Update();
 
-if (!aqua::mouse::Button(aqua::mouse::BUTTON_ID::LEFT))
+if (!aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
         return;
 
 CEffectManager* effect = (CEffectManager*)aqua::FindGameObject("EffectManager");

@@ -124,13 +124,20 @@ aqua::CVector2 IGoki::GetCenterPosition(void)
     return m_Position + m_AnimeSprite.anchor;
 }
 
+//ƒ‰ƒCƒtæ“¾
 int IGoki::GetLife(void)
 {
     return m_Life;
 }
 
+//À•Wî•ñæ“¾
+void IGoki::Setposition(aqua::CVector2 pos)
+{
+    m_Position = pos;
+}
 
 
+//•Ç”»’èæ“¾
 void IGoki::CheckHitWall(void)
 {
     const float width = (float)(aqua::GetWindowWidth() - m_Width);

@@ -10,10 +10,10 @@ public:
 	//コンストラクタ
 	CGokiBlue(aqua::IGameObject* parent);
 
-	//
+	//デストラクタ
 	~CGokiBlue(void);
 
-	//
+	//初期化
 	void	Initialize(void);
 
 private:
@@ -22,5 +22,5 @@ private:
 	static const float	m_radius;		//<!当たり半径
 	static const int	m_max_velocity;	//<!最高速度
 	static const int	m_min_velocity;	//<!最低速度
-	//static const int	;	//<!
+	
 };

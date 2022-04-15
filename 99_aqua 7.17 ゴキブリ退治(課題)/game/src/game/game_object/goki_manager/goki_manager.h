@@ -49,15 +49,16 @@ public:
     void Draw (void);
     //解放
     void Finalize(void);
-
+    //生成
     void Create(GOKI_ID id);
 
 private:
+    //当たり判定
     void CheckHitGoki(void);
 
-    static const float m_create_interval;
-    static const float m_acceleration_time;
-    aqua::CTimer        m_CreateTimer;
+    static const float m_create_interval;       //!<生成間隔
+    static const float m_acceleration_time;     //!<生成加速度
+    aqua::CTimer        m_CreateTimer;          //!<生成タイマー
 
 
 };

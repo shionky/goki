@@ -8,10 +8,10 @@ public:
 	//コンストラクタ
 	CGokiBrown(aqua::IGameObject* parent);
 
-	//
+	//デストラクタ
 	~CGokiBrown(void);
 
-	//
+	//初期化
 	void	Initialize(void);
 
 private:

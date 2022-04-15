@@ -16,10 +16,14 @@ public:
 	//
 	void	Initialize(void);
 
+	//
+	void	Update(void);
+
 private:
 	static const int	m_width;		//!<•
 	static const int	m_height;		//<!‚‚³
 	static const float	m_radius;		//<!“–‚½‚è”¼Œa
 	static const int	m_max_velocity;	//<!Å‚‘¬“x
 	static const int	m_min_velocity;	//<!Å’á‘¬“x
+	aqua::CTimer		m_timer;		//<!ŽžŠÔ
 };

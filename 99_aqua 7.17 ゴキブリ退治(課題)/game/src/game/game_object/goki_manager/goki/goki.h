@@ -101,6 +101,9 @@ public:
     */
     int         GetLife(void);
 
+    //À•W‚Ìİ’è
+    void	Setposition(aqua::CVector2 pos);
+
 protected:
     /*!
     *@brief     •Ç”»’è

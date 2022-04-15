@@ -8,9 +8,16 @@ public:
 	CEhitEffect(IGameObject* parent);
 	~CEhitEffect() = default;
 
+	//‰Šú‰»
 	void Initialize(const aqua::CVector2& position);
+	
+	//XV
 	void Update(void);
+	
+	//•`‰æ
 	void Draw(void);
+	
+	//‰ğ•ú
 	void Finalize(void);
 private:
 
